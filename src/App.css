@@ -112,6 +112,14 @@
   background-color: #16a34a;
 }
 
+.nav-link-todo {
+  background-color: #8b5cf6;
+}
+
+.nav-link-todo:hover {
+  background-color: #7c3aed;
+}
+
 .main-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -186,6 +194,14 @@
   background-color: #dcfce7;
 }
 
+.feature-card-todo {
+  background-color: #f5f3ff;
+}
+
+.feature-card-todo:hover {
+  background-color: #ede9fe;
+}
+
 .feature-title {
   font-size: 1.25rem;
   font-weight: 600;
@@ -198,6 +214,10 @@
 
 .feature-title-router {
   color: #15803d;
+}
+
+.feature-title-todo {
+  color: #6d28d9;
 }
 
 .feature-description {

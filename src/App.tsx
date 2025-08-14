@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import EventBusExample from './components/EventBusExample'
 import RouterDemo from './components/RouterDemo'
+import TodoApp from './components/TodoApp'
 import './App.css'
 
 function App() {
@@ -16,6 +17,14 @@ function App() {
                   className="nav-link nav-link-home"
                 >
                   首页
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/todo"
+                  className="nav-link nav-link-todo"
+                >
+                  Todo List
                 </Link>
               </li>
               <li>
@@ -47,9 +56,15 @@ function App() {
                 </h1>
                 <div>
                   <p className="welcome-description">
-                    这是一个展示 React 核心功能的示例项目，包含了 EventBus 和路由的实践示例。
+                    这是一个展示 React 核心功能的示例项目，包含了 Todo List、EventBus 和路由的实践示例。
                   </p>
                   <div className="features-grid">
+                    <div className="feature-card feature-card-todo">
+                      <h2 className="feature-title feature-title-todo">Todo List</h2>
+                      <p className="feature-description">
+                        使用 Service Worker 实现的离线 Todo List，支持数据持久化存储。
+                      </p>
+                    </div>
                     <div className="feature-card feature-card-eventbus">
                       <h2 className="feature-title feature-title-eventbus">EventBus 示例</h2>
                       <p className="feature-description">
@@ -72,6 +87,7 @@ function App() {
               </div>
             </div>
           } />
+          <Route path="/todo" element={<TodoApp />} />
           <Route path="/event-bus" element={<EventBusExample />} />
           <Route path="/router-demo" element={<RouterDemo />} />
         </Routes>
