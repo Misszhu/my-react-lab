@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import EventBusExample from './components/EventBusExample'
 import RouterDemo from './components/RouterDemo'
 import TodoApp from './components/TodoApp'
+import TodoAppOffline from './components/TodoAppOffline'
 import './App.css'
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
               </li>
               <li>
                 <Link
-                  to="/todo"
+                  to="/todo-offline"
                   className="nav-link nav-link-todo"
                 >
                   Todo List
@@ -88,6 +89,7 @@ function App() {
             </div>
           } />
           <Route path="/todo" element={<TodoApp />} />
+          <Route path="/todo-offline" element={<TodoAppOffline />} />
           <Route path="/event-bus" element={<EventBusExample />} />
           <Route path="/router-demo" element={<RouterDemo />} />
         </Routes>
